@@ -8,6 +8,8 @@ import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
+import { Sun } from 'lucide-react'
+
 const pacifico = Pacifico({
   subsets: ['latin'],
   weight: '400'
@@ -32,7 +34,10 @@ const Header = () => {
 
       <div className='flex w-full max-w-sm items-center space-x-2 relative px-1'>
         <Input className='py-7 pr-24' type='email' placeholder='Find a recipe...' />
-        <Button className='absolute right-3' type='submit'>Search</Button>
+        <Button className='absolute right-[4.2rem]' type='submit'>Search</Button>
+        <Button type='button' variant='outline' size='sm'>
+          <Sun className='h-5 w-5' />
+        </Button>
       </div>
     </header>
   )
