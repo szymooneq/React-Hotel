@@ -1,14 +1,11 @@
-'use client'
-
+import Image from 'next/image'
 import { Pacifico } from 'next/font/google'
 import { useMemo } from 'react'
 import { getHeader } from '@/lib/getHeader'
 import { cn } from '@/lib/cn'
-import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-
-import { Sun } from 'lucide-react'
+import ThemeButton from '@/components/Header/ThemeButton'
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -35,9 +32,7 @@ const Header = () => {
       <div className='flex w-full max-w-sm items-center space-x-2 relative px-1'>
         <Input className='py-7 pr-24' type='email' placeholder='Find a recipe...' />
         <Button className='absolute right-[4.2rem]' type='submit'>Search</Button>
-        <Button type='button' variant='outline' size='sm'>
-          <Sun className='h-5 w-5' />
-        </Button>
+        <ThemeButton />
       </div>
     </header>
   )
