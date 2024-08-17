@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <Navbar />
       <main className='flex-1'>
-        <ul className='px-4 py-10 grid gap-7 md:mx-0 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5'>
+        <ul className='px-4 py-10 grid gap-7 md:mx-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
           {recipesMock.map(recipe => (
             <li key={recipe.id}>
               <RecipeCard {...recipe} />

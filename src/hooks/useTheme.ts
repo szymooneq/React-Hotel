@@ -1,38 +1,15 @@
-import { useCallback, useEffect, useState } from 'react'
-
-type Theme = 'light' | 'dark'
+import { useContext } from 'react'
+import { ThemeContext } from '@/context/Theme/ThemeProvider'
 
 export const useTheme = () => {
-  const [value, setValueState] = useState<Theme | null>(null)
+  const context = useContext(ThemeContext)
 
-  const setValue = useCallback((value: Theme) => setValueState(value), [])
+  if (!context) {
+    throw new Error('useTheme should be used insinde ThemeProvider')
+  }
 
-  useEffect(() => {
-    const storageValue = window.localStorage.getItem('theme')
-    const isDark = document.body.classList.contains('dark')
-
-    if (storageValue) {
-      setValue(storageValue as Theme)
-      return
-    }
-
-    if (!storageValue && isDark) {
-      setValue('dark')
-      window.localStorage.setItem('theme', 'dark')
-      return
-    }
-
-    setValue('light')
-    window.localStorage.setItem('theme', 'light')
-  }, [setValue])
-
-  useEffect(() => {
-    document.body.classList.toggle('dark', value === 'dark')
-
-    if (value) {
-      window.localStorage.setItem('theme', value)
-    }
-  }, [value])
-
-  return { value, setValue }
+  return {
+    ...context,
+    isDarkTheme: context.theme === 'dark'
+  }
 }

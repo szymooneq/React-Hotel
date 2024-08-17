@@ -1,18 +1,15 @@
 'use client'
 
+import { Sun, Moon } from 'lucide-react'
 import { useTheme } from '@/hooks/useTheme'
 import { Button } from '@/components/ui/button'
 
-import { Sun, Moon } from 'lucide-react'
-
 const ThemeButton = () => {
-  const { value, setValue } = useTheme()
-
-  const isDarkTheme = value === 'dark'
+  const { isDarkTheme, setTheme } = useTheme()
 
   const onChangeTheme = () => {
     const newValue = isDarkTheme ? 'light' : 'dark'
-    setValue(newValue)
+    setTheme(newValue)
   }
 
   return (

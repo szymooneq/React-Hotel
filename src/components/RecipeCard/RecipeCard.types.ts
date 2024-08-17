@@ -3,10 +3,20 @@ export interface RecipeCardProps {
   title: string
   description: string
   duration: number
-  difficulty: 1 | 2 | 3
+  nutrions: {
+    kcal: number
+    fats: number
+    carbs: number
+    proteins: number
+  }
   cover: {
     url: string
     width: number
     height: number
   }
+  isLiked: boolean
+}
+
+export interface LikeButtonProps {
+  isLiked: boolean
 }
