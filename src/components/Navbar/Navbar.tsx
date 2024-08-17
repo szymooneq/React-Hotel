@@ -6,7 +6,7 @@ const Navbar = () => {
   const pathname = '/'
 
   return (
-    <div className='p-4 flex justify-center items-center gap-6 text-sm font-bold bg-gray-100 dark:bg-gray-800'>
+    <div className='p-4 flex justify-center items-center gap-6 text-sm font-bold bg-gray-100 dark:bg-card'>
       {menuItems.map(item => (
         <Button
           key={item.href}
