@@ -13,11 +13,16 @@ const ThemeButton = () => {
   }
 
   return (
-    <Button type='button' variant='outline' size='sm' onClick={onChangeTheme}>
+    <Button
+      type='button'
+      variant='ghost'
+      size='icon'
+      className='size-12 rounded-full'
+      onClick={onChangeTheme}>
       {isDarkTheme ? (
-        <Moon className='h-5 w-5' />
+        <Moon className='size-4' />
       ) : (
-        <Sun className='h-5 w-5' />
+        <Sun className='size-4' />
       )}
       <span className='sr-only'>
         {isDarkTheme ? 'Light mode' : 'Dark mode'}

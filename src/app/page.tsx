@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
-import Navbar from '@/components/Navbar'
 import Categories from '@/components/Categories'
 import RecipeSection from '@/components/RecipeSection'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
