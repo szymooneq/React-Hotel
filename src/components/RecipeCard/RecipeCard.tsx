@@ -32,7 +32,7 @@ const RecipeCard = ({ id, title, nutrions, duration, cover, isLiked }: RecipeCar
       
       <CardFooter>
         <Button className='flex items-center gap-2 w-full' asChild>
-          <Link href={`/${id}`}>
+          <Link href={`/recipe/${id}`}>
             Check <ArrowRight className='mt-[2px] h-4 w-4' />
           </Link>
         </Button>
