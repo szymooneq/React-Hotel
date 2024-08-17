@@ -1,3 +1,5 @@
+import RecipeModal from '@/components/RecipeModal'
+
 interface RecipePageProps {
   params: {
     recipeId: string
@@ -6,6 +8,6 @@ interface RecipePageProps {
 
 export default function RecipePage({ params }: RecipePageProps) {
   return (
-    <div>{params.recipeId}</div>
+    <RecipeModal>{params.recipeId}</RecipeModal>
   )
 }
