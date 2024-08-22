@@ -28,8 +28,8 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
         fontSans.variable
       )}>
         <ThemeProvider>
-          {modal}
           {children}
+          {modal}
         </ThemeProvider>
       </body>
     </html>

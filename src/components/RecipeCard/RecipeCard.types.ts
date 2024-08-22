@@ -19,4 +19,5 @@ export interface RecipeCardProps {
 
 export interface LikeButtonProps {
   isLiked: boolean
+  className?: string
 }

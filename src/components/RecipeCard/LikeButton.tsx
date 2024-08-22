@@ -6,7 +6,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { Button } from '@/components/ui/button'
 import type { LikeButtonProps } from './RecipeCard.types'
 
-const LikeButton = ({ isLiked }: LikeButtonProps) => {
+const LikeButton = ({ isLiked, className = '' }: LikeButtonProps) => {
   const [isLikedState, setIsLikedState] = useState(isLiked)
   const { isDarkTheme } = useTheme()
 
@@ -21,12 +21,12 @@ const LikeButton = ({ isLiked }: LikeButtonProps) => {
 
   return (
     <Button
-      className='absolute right-9 top-7'
+      className={className}
       variant='outline'
       size='icon'
       onClick={onClick}>
       <Heart
-        className='h-5 w-5'
+        className='size-5'
         fill={fillColor}
         color={strokeColor}  />
     </Button>

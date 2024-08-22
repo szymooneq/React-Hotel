@@ -17,7 +17,7 @@ const RecipeModal = ({ children }: RecipeModalProps) => {
       open={true}
       onOpenChange={onOpenChange}>
       <DialogOverlay>
-        <DialogContent className='overflow-y-hidden'>
+        <DialogContent className='p-0 my-10 max-w-3xl'>
           {children}
         </DialogContent>
       </DialogOverlay>
