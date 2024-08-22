@@ -26,46 +26,50 @@ const RecipeContent = () => {
       <div className='px-10 pb-10'>
         <RecipeDetails details={recipeMock.details} nutrions={recipeMock.nutrions} />
 
-        <Tabs defaultValue='ingredients'>
-          <TabsList className='w-full'>
-            <TabsTrigger value='ingredients' className='flex-1'>
-              Ingredients
-            </TabsTrigger>
-            <TabsTrigger value='instructions' className='flex-1'>
-              Instructions
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value='ingredients'>
-            <h3 className='mb-2 text-2xl font-bold'>Ingredients</h3>
-            <ul className='list-disc'>
-              {recipeMock.ingredients.map((ingredient, idx) => (
-                <li key={idx} className='ml-5'>{ingredient}</li>
-              ))}
-            </ul>
-          </TabsContent>
-          <TabsContent value='instructions'>
-            <h3 className='mb-2 text-2xl font-bold'>Instructions</h3>
-            <ol className='list-decimal'>
-              {recipeMock.steps.map((step, idx) => (
-                <li key={idx} className='ml-5'>{step}</li>
-              ))}
-            </ol>
-          </TabsContent>
+        <Tabs defaultValue='ingredients' asChild>
+          <section>
+            <TabsList className='w-full'>
+              <TabsTrigger value='ingredients' className='flex-1'>
+                Ingredients
+              </TabsTrigger>
+              <TabsTrigger value='instructions' className='flex-1'>
+                Instructions
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value='ingredients'>
+              <h3 className='mb-2 text-2xl font-bold'>Ingredients</h3>
+              <ul className='list-disc'>
+                {recipeMock.ingredients.map((ingredient, idx) => (
+                  <li key={idx} className='ml-5'>{ingredient}</li>
+                ))}
+              </ul>
+            </TabsContent>
+            <TabsContent value='instructions'>
+              <h3 className='mb-2 text-2xl font-bold'>Instructions</h3>
+              <ol className='list-decimal'>
+                {recipeMock.steps.map((step, idx) => (
+                  <li key={idx} className='ml-5'>{step}</li>
+                ))}
+              </ol>
+            </TabsContent>
+          </section>
         </Tabs>
-
-        <h3 className='mt-5 mb-2 text-2xl font-bold'>Creator</h3>
-        <div className='flex items-center gap-2'>
-          <Avatar className='border-2 border-primary size-14'>
-            <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <div>
-            <h4 className='text-xl'>Szymon Dudka</h4>
-            <p className='text-sm text-gray-600 dark:text-gray-300'>
-              I&apos;m the author and recipe developer.
-            </p>
+        
+        <section>
+          <h3 className='mt-5 mb-2 text-2xl font-bold'>Creator</h3>
+          <div className='flex items-center gap-2'>
+            <Avatar className='border-2 border-primary size-14'>
+              <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+            <div>
+              <h4 className='text-xl'>Szymon Dudka</h4>
+              <p className='text-sm text-gray-600 dark:text-gray-300'>
+                I&apos;m the author and recipe developer.
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </article>
   )
