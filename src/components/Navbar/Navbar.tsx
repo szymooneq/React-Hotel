@@ -32,9 +32,7 @@ const Navbar = () => {
 
         <DockIcon>
           <Tooltip>
-            <TooltipTrigger asChild>
-              <ThemeButton />
-            </TooltipTrigger>
+            <ThemeButton />
             <TooltipContent>
               <p>Change theme</p>
             </TooltipContent>

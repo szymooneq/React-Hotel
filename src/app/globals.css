@@ -6,6 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
+    --foreground-black: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -34,6 +35,7 @@
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
+    --foreground-black: 240 10% 3.9%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 9%;
@@ -68,8 +70,9 @@
   }
 }
 
+/* SWIPER CLASSES */
 .swiper {
-  @apply mx-auto block relative max-w-[1024px] overflow-hidden;
+  @apply mx-auto block relative overflow-hidden;
 }
 
 .swiper-horizontal {
@@ -86,7 +89,7 @@
 }
 
 .swiper-slide {
-  @apply mx-auto shrink-0 relative text-center transition-transform;
+  @apply /* mx-auto */ shrink-0 relative text-center transition-transform;
 }
 
 .swiper-pagination {
@@ -102,5 +105,5 @@
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-background;
+  @apply bg-foreground-black;
 }
