@@ -3,7 +3,7 @@ import { recipesMock } from '@/mock/recipes'
 
 const RecipeSection = () => {
   return (
-    <section className='px-10 mb-5'>
+    <section className='px-5 mb-5 md:px-10'>
       <h2 className='mb-2 text-2xl font-bold'>Popular Recipes</h2>
       <ul className='grid gap-7 md:mx-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
         {recipesMock.map(recipe => (

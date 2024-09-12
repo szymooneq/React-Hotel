@@ -1,16 +1,14 @@
-import Header from '@/components/Header'
+import SearchHeader from '@/components/SearchHeader'
 import Navbar from '@/components/Navbar'
 import Categories from '@/components/Categories'
 import RecipeSection from '@/components/RecipeSection'
-import FeaturedSection from '@/components/FeaturedSection'
 
-export default function Home() {
+export default function SearchPage() {
   return (
     <>
       <Navbar />
-      <Header />
+      <SearchHeader />
       <main>
-        <FeaturedSection />
         <Categories />
         <RecipeSection />
       </main>

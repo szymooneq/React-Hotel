@@ -14,7 +14,7 @@ const RecipeContent = () => {
 
       <LikeButton className='absolute left-12 top-12' isLiked={true} />
 
-      <header className='-mt-4 pt-8 px-10 relative rounded-t-md bg-background'>
+      <header className='-mt-4 pt-8 px-5 relative rounded-t-md bg-background md:px-10'>
         <DialogTitle className='mb-1 text-3xl font-bold' asChild>
           <h2>{recipeMock.title}</h2>
         </DialogTitle>
@@ -23,7 +23,7 @@ const RecipeContent = () => {
         </p>
       </header>
 
-      <div className='px-10 pb-10'>
+      <div className='px-5 pb-10 md:px-10'>
         <RecipeDetails details={recipeMock.details} nutrions={recipeMock.nutrions} />
 
         <Tabs defaultValue='ingredients' asChild>
