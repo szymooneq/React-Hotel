@@ -18,7 +18,7 @@ const RecipeCard = ({ id, title, nutrions, duration, cover, isLiked }: RecipeCar
           height={cover.height}
           alt='' />
         <LikeButton className='absolute right-9 top-7' isLiked={isLiked} />
-        <CardTitle className='line-clamp-1'>{title}</CardTitle>
+        <CardTitle className='truncate'>{title}</CardTitle>
       </CardHeader>
 
       <CardContent className='flex gap-2'>

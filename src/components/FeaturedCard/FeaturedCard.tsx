@@ -17,7 +17,7 @@ const FeaturedCard = () => {
         height={recipeMock.images[0].height} />
         
       <div className='absolute text-left bottom-4 left-4 right-4 z-20 pointer-events-none'>
-        <h3 className='mb-2 text-2xl font-bold text-foreground-black'>
+        <h3 className='mb-2 text-2xl font-bold text-foreground-black truncate'>
           {recipeMock.title}
         </h3>
 
