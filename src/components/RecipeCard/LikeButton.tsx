@@ -27,7 +27,7 @@ const LikeButton = ({ isLiked, className = '' }: LikeButtonProps) => {
       size='icon'
       onClick={onClick}>
       <Heart className='size-5' fill={fillColor} color={strokeColor}  />
-      <span className='sr-only'>Like</span>
+      <span className='sr-only'>{isLikedState ? 'Unlike' : 'Like'}</span>
     </Button>
   )
 }

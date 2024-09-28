@@ -3,6 +3,8 @@ import type { RecipeCardProps } from '@/components/RecipeCard/RecipeCard.types'
 import header_2 from '@/assets/images/header/header_2.jpg'
 import header_3 from '@/assets/images/header/header_3.jpg'
 import header_4 from '@/assets/images/header/header_4.jpg'
+import header_5 from '@/assets/images/header/header_5.jpg'
+import header_6 from '@/assets/images/header/header_6.jpg'
 
 export const recipesMock: Array<RecipeCardProps> = [
   {
@@ -58,5 +60,41 @@ export const recipesMock: Array<RecipeCardProps> = [
       height: header_4.height
     },
     isLiked: true
+  },
+  {
+    id: '4',
+    title: 'Spaghetti',
+    description: 'Amerykańskie puszyste placuszki. Klasyczne, proste do wykonania, najlepsze na śniadanie lub brunch. Udają się za każdym razem. Do ciasta na placki można wmieszać świeże borówki amerykańskie, jeśli lubicie. Polecam!',
+    duration: 40,
+    nutrions: {
+      kcal: 533,
+      fats: 23,
+      carbs: 354,
+      proteins: 23
+    },
+    cover: {
+      url: header_5.src,
+      width: header_5.width,
+      height: header_5.height
+    },
+    isLiked: false
+  },
+  {
+    id: '5',
+    title: 'Spaghetti',
+    description: 'Amerykańskie puszyste placuszki. Klasyczne, proste do wykonania, najlepsze na śniadanie lub brunch. Udają się za każdym razem. Do ciasta na placki można wmieszać świeże borówki amerykańskie, jeśli lubicie. Polecam!',
+    duration: 40,
+    nutrions: {
+      kcal: 533,
+      fats: 23,
+      carbs: 354,
+      proteins: 23
+    },
+    cover: {
+      url: header_6.src,
+      width: header_6.width,
+      height: header_6.height
+    },
+    isLiked: false
   }
 ]

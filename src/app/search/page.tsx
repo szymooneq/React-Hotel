@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import SearchHeader from '@/components/SearchHeader'
-import RecipeSection from '@/components/RecipeSection'
 import SearchOptions from '@/components/SearchOptions'
+import SearchRecipes from '@/components/SearchRecipes'
 
 export default function SearchPage() {
   return (
@@ -10,9 +10,7 @@ export default function SearchPage() {
       <SearchHeader />
       <main className='flex'>
         <SearchOptions />
-        <div className='basis-[82%]'>
-          <RecipeSection />
-        </div>
+        <SearchRecipes />
       </main>
     </>
   )
