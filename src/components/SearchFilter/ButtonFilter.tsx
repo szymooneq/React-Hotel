@@ -2,9 +2,9 @@ import { memo } from 'react'
 import { cn } from '@/lib/cn'
 import type { ButtonFilterProps } from './SearchFilter.types'
 
-const ButtonFilter = ({ name, color, value, children, isActive, setFilters }: ButtonFilterProps) => {
+const ButtonFilter = ({ name, color, value, children, isActive, setOptions }: ButtonFilterProps) => {
   const onClick = () => {
-    setFilters(current => ({
+    setOptions(current => ({
       ...current,
       [name]: isActive ? null : value
     }))

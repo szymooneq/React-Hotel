@@ -3,13 +3,13 @@ import { DualRangeSlider } from '@/components/ui/dualrangeslider'
 import LabelFilter from './LabelFilter'
 import type { RangeFilterProps } from './SearchFilter.types'
 
-const RangeFilter = ({ id, label, value, max, step, setFilters }: RangeFilterProps) => {
+const RangeFilter = ({ id, label, value, max, step, setOptions }: RangeFilterProps) => {
   const onValueChange = useCallback((value: Array<number>) => {
-    setFilters(current => ({
+    setOptions(current => ({
       ...current,
       [id]: value
     }))
-  }, [id, setFilters])
+  }, [id, setOptions])
 
   return (
     <>

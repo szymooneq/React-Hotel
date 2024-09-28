@@ -12,9 +12,9 @@ import type { CategoryFilterProps } from './SearchFilter.types'
 import { categoriesMock } from '@/mock/categories'
 
 // TODO: SelectItem remove span
-const CategoryFilter = ({ setFilters }: CategoryFilterProps) => {
+const CategoryFilter = ({ setOptions }: CategoryFilterProps) => {
   const onChange = (value: Category) => {
-    setFilters(current => ({
+    setOptions(current => ({
       ...current,
       category: value
     }))
@@ -23,7 +23,7 @@ const CategoryFilter = ({ setFilters }: CategoryFilterProps) => {
   return (
     <Select defaultValue='all' onValueChange={onChange}>
       <SelectTrigger className='mb-5 text-nowrap'>
-        <SelectValue placeholder='Category' />
+        <SelectValue placeholder='Select category' />
       </SelectTrigger>
 
       <SelectContent>

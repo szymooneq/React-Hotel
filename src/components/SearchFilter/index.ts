@@ -1,1 +1,1 @@
-export { default } from './SearchFilter'
+export { default } from './FilterCard'

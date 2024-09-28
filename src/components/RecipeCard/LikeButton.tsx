@@ -16,8 +16,9 @@ const LikeButton = ({ isLiked, className = '' }: LikeButtonProps) => {
   }
 
   const fillColor = isLikedState ? '#ce0c0c' : 'transparent'
-  const strokeColor = isLikedState ? '#ce0c0c' : isDarkTheme
-    ? '#ffffff' : '#000000'
+  const strokeColor = isLikedState
+    ? '#ce0c0c'
+    : isDarkTheme ? '#ffffff' : '#000000'
 
   return (
     <Button

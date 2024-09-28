@@ -10,28 +10,18 @@ import RangeFilter from './RangeFilter'
 import LabelFilter from './LabelFilter'
 import ButtonFilter from './ButtonFilter'
 import CategoryFilter from './CategoryFilter'
-import type { Filters } from './SearchFilter.types'
+import type { SearchCardProps } from './SearchFilter.types'
 
 import { durationFilters, portionsFilters } from '@/mock/filters'
 
-// TODO: Update URL search parameters
-const SearchFilter = () => {
+const FilterCard = ({ options, setOptions }: SearchCardProps) => {
   const [isNutrionsExpand, setIsNutrionsExpand] = useState(false)
-  const [filters, setFilters] = useState<Filters>({
-    category: null,
-    duration: null,
-    portions: null,
-    kcal: null,
-    fats: null,
-    carbs: null,
-    proteins: null
-  })
 
   const onNutrionsExpand = useCallback((open: boolean) => {
     setIsNutrionsExpand(open)
 
     if (!open) {
-      setFilters(current => ({
+      setOptions(current => ({
         ...current,
         kcal: null,
         fats: null,
@@ -39,10 +29,10 @@ const SearchFilter = () => {
         proteins: null
       }))
     }
-  }, [])
+  }, [setOptions])
 
   return (
-    <Card className='sticky top-4 left-4 w-full h-fit basis-[18%]' asChild>
+    <Card className='mb-5' asChild>
       <section>
         <CardHeader>
           <CardTitle asChild>
@@ -54,7 +44,7 @@ const SearchFilter = () => {
           <LabelFilter>
             <ChefHat className='size-4' /> Category
           </LabelFilter>
-          <CategoryFilter setFilters={setFilters} />
+          <CategoryFilter setOptions={setOptions} />
 
           <LabelFilter>
             <Clock className='size-4' /> Duration
@@ -66,8 +56,8 @@ const SearchFilter = () => {
                 color='blue'
                 name='duration'
                 value={durationItem.value}
-                isActive={filters.duration === durationItem.value}
-                setFilters={setFilters}>
+                isActive={options.duration === durationItem.value}
+                setOptions={setOptions}>
                 {durationItem.label}
               </ButtonFilter>
             ))}
@@ -83,8 +73,8 @@ const SearchFilter = () => {
                 color='green'
                 name='portions'
                 value={portionsItem.value}
-                isActive={filters.portions === portionsItem.value}
-                setFilters={setFilters}>
+                isActive={options.portions === portionsItem.value}
+                setOptions={setOptions}>
                 {portionsItem.label}
               </ButtonFilter>
             ))}
@@ -108,32 +98,32 @@ const SearchFilter = () => {
                 label='Kcal'
                 max={2000}
                 step={10}
-                value={filters.kcal}
-                setFilters={setFilters} />
+                value={options.kcal}
+                setOptions={setOptions} />
 
               <RangeFilter
                 id='fats'
                 label='Fats'
                 max={200}
                 step={1}
-                value={filters.fats}
-                setFilters={setFilters} />
+                value={options.fats}
+                setOptions={setOptions} />
 
               <RangeFilter
                 id='carbs'
                 label='Carbs'
                 max={200}
                 step={1}
-                value={filters.carbs}
-                setFilters={setFilters} />
+                value={options.carbs}
+                setOptions={setOptions} />
 
               <RangeFilter
                 id='proteins'
                 label='Proteins'
                 max={200}
                 step={1}
-                value={filters.proteins}
-                setFilters={setFilters} />
+                value={options.proteins}
+                setOptions={setOptions} />
             </CollapsibleContent>
           </Collapsible>
         </CardContent>
@@ -142,4 +132,4 @@ const SearchFilter = () => {
   )
 }
 
-export default SearchFilter
+export default FilterCard
