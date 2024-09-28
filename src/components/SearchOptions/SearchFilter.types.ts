@@ -1,7 +1,7 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import type { Category } from '@/types/Category'
 
-export type SearchOptions = {
+export type SearchOptionsType = {
   sortBy: string | null
   category: Category | null
   duration: number | Array<number> | null
@@ -13,8 +13,8 @@ export type SearchOptions = {
 }
 
 export interface SearchCardProps {
-  options: SearchOptions
-  setOptions: Dispatch<SetStateAction<SearchOptions>>
+  options: SearchOptionsType
+  setOptions: Dispatch<SetStateAction<SearchOptionsType>>
 }
 
 export interface ButtonFilterProps {
@@ -23,11 +23,11 @@ export interface ButtonFilterProps {
   value: number | Array<number>
   children: ReactNode
   isActive: boolean
-  setOptions: Dispatch<SetStateAction<SearchOptions>>
+  setOptions: Dispatch<SetStateAction<SearchOptionsType>>
 }
 
 export interface CategoryFilterProps {
-  setOptions: Dispatch<SetStateAction<SearchOptions>>
+  setOptions: Dispatch<SetStateAction<SearchOptionsType>>
 }
 
 export interface RangeFilterProps {
@@ -36,7 +36,7 @@ export interface RangeFilterProps {
   max: number
   step: number
   value: Array<number> | null
-  setOptions: Dispatch<SetStateAction<SearchOptions>>
+  setOptions: Dispatch<SetStateAction<SearchOptionsType>>
 }
 
 export interface LabelFilterProps {

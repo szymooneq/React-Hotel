@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import SearchHeader from '@/components/SearchHeader'
 import RecipeSection from '@/components/RecipeSection'
-import SearchOptions from '@/components/SearchFilter/SearchOptions'
+import SearchOptions from '@/components/SearchOptions'
 
 export default function SearchPage() {
   return (
