@@ -9,6 +9,7 @@ const ButtonFilter = ({ name, color, value, children, isActive, setOptions }: Bu
       [name]: isActive ? null : value
     }))
   }
+  
   return (
     <button
       type='button'

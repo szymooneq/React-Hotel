@@ -2,9 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import SortSelect from './SortSelect'
 import type { SearchCardProps } from './SearchFilter.types'
 
-const SortCard = ({ options, setOptions }: SearchCardProps) => {
+const SortCard = ({ className, options, setOptions }: SearchCardProps) => {
   return (
-    <Card asChild>
+    <Card className={className} asChild>
       <section>
         <CardHeader>
           <CardTitle asChild>

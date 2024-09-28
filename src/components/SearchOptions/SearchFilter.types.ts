@@ -13,6 +13,7 @@ export type SearchOptionsType = {
 }
 
 export interface SearchCardProps {
+  className?: string
   options: SearchOptionsType
   setOptions: Dispatch<SetStateAction<SearchOptionsType>>
 }

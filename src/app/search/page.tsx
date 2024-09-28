@@ -9,9 +9,7 @@ export default function SearchPage() {
       <Navbar />
       <SearchHeader />
       <main className='flex'>
-        <div className='sticky top-4 left-4 w-full h-fit basis-[18%]'>
-          <SearchOptions />
-        </div>
+        <SearchOptions />
         <div className='basis-[82%]'>
           <RecipeSection />
         </div>

@@ -14,7 +14,7 @@ import type { SearchCardProps } from './SearchFilter.types'
 
 import { durationFilters, portionsFilters } from '@/mock/filters'
 
-const FilterCard = ({ options, setOptions }: SearchCardProps) => {
+const FilterCard = ({ className, options, setOptions }: SearchCardProps) => {
   const [isNutrionsExpand, setIsNutrionsExpand] = useState(false)
 
   const onNutrionsExpand = useCallback((open: boolean) => {
@@ -32,7 +32,7 @@ const FilterCard = ({ options, setOptions }: SearchCardProps) => {
   }, [setOptions])
 
   return (
-    <Card className='mb-5' asChild>
+    <Card className={className} asChild>
       <section>
         <CardHeader>
           <CardTitle asChild>
